@@ -1,0 +1,38 @@
+.products-container {
+  width: 70%;
+  margin: auto;
+  margin-top: 5vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  flex-basis: calc(33% - 20px);
+  margin: 10px;
+  text-align: center;
+}
+
+.product-name {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.product img {
+  width: 70%;
+  border: 2px solid var(--blue);
+  border-radius: 3px;
+  height: auto;
+}
+
+.product button {
+  background-color: var(--yellow);
+  color: var(--dark);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px; /* Space between the product name and the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
