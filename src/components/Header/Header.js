@@ -5,7 +5,7 @@ function Header({ onCartClick }) {
   return (
     <header className="header">
       <h1>My React Store</h1>
-      <button className="cart-button" onClick={onCartClick}>
+      <button className="yellow-button" onClick={onCartClick}>
         Cart
       </button>
     </header>

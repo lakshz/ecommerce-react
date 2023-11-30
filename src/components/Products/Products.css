@@ -9,7 +9,9 @@
 
 .product {
   flex-basis: calc(33% - 20px);
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -20,7 +22,7 @@
 
 .product img {
   width: 70%;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--dark);
   border-radius: 3px;
   height: auto;
 }

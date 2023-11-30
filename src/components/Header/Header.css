@@ -14,12 +14,20 @@
   color: var(--yellow);
 }
 
-.cart-button {
-  padding: 10px 20px;
-  background-color: var(--yellow);
-  color: var(--dark);
+button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  padding: 10px 20px;
+}
+
+.yellow-button {
+  background-color: var(--yellow);
+  color: var(--dark);
+}
+
+.black-button {
+  background-color: var(--dark);
+  color: var(--white);
 }

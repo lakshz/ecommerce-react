@@ -15,9 +15,10 @@ code {
 :root {
   --yellow: #eec643;
   --dark: #141414;
-  --blue: #011638;
+  --blue: #0d21a1;
+  --white: #eef0f2;
 }
 
 body {
-  background-color: #eef0f2;
+  background-color: var(--white);
 }

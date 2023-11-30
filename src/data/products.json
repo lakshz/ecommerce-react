@@ -13,5 +13,23 @@
     "id": 3,
     "name": "Red Hoodie",
     "image": "red_hoodie.png"
+  },
+  {
+    "id": 4,
+    "name": "Green Dress",
+    "image": "green_dress.png",
+    "button": "Add to Cart"
+  },
+  {
+    "id": 5,
+    "name": "Yellow Summer Top",
+    "image": "yellow_top.png",
+    "button": "Add to Cart"
+  },
+  {
+    "id": 6,
+    "name": "Running Shoes",
+    "image": "black_shoes.png",
+    "button": "Add to Cart"
   }
 ]
