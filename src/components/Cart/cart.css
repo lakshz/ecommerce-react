@@ -3,13 +3,20 @@
   padding: 10px;
 }
 
+.cart-heading {
+  margin-top: 0;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
 .cart-item {
   width: 100%;
   display: flex;
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 3px;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 

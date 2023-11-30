@@ -43,6 +43,7 @@ function Cart({
   return (
     <Modal show={showCart} onClose={closeCart}>
       <div className="cart-container">
+        <p className="cart-heading">Cart</p>
         {cartItems.length === 0 ? (
           <div className="empty-cart">Cart is empty</div>
         ) : (

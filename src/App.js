@@ -1,16 +1,23 @@
 import { useState } from "react";
+import productData from "./data/products.json";
+
 import Header from "./components/Header/Header";
 import Products from "./components/Products/Products";
 import Cart from "./components/Cart/Cart";
-import productData from "./data/products.json";
+import AddProduct from "./components/AddProduct/AddProduct";
 
 function App() {
-  const [showCart, setShowCart] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [products, setProducts] = useState(productData);
 
+  const [showCart, setShowCart] = useState(false);
+  const [showAddProduct, setShowAddProduct] = useState(false);
+
   const openCart = () => setShowCart(true);
   const closeCart = () => setShowCart(false);
+
+  const openAddProduct = () => setShowAddProduct(true);
+  const closeAddProduct = () => setShowAddProduct(false);
 
   const handleAddToCart = (productId, productName, productImg) => {
     const productInCartIndex = cartItems.findIndex(
@@ -48,9 +55,21 @@ function App() {
     setCartItems(newCartItems);
   };
 
+  const handleAddProduct = (productName) => {
+    setProducts((prev) => [
+      ...prev,
+      { id: prev.length + 1, name: productName, image: "default_product.png" },
+    ]);
+    closeAddProduct();
+  };
+
   return (
-    <div className="App">
-      <Header showCart={showCart} onCartClick={openCart} />
+    <>
+      <Header
+        showCart={showCart}
+        onCartClick={openCart}
+        onAddProductClick={openAddProduct}
+      />
       <Products products={products} onAddToCart={handleAddToCart} />
       <Cart
         showCart={showCart}
@@ -59,7 +78,12 @@ function App() {
         onDecQuantity={handleDecreaseQuantity}
         onIncQuantity={handleIncreaseQuantity}
       />
-    </div>
+      <AddProduct
+        showAddProduct={showAddProduct}
+        closeAddProduct={closeAddProduct}
+        onAddProduct={handleAddProduct}
+      />
+    </>
   );
 }
 
